@@ -2,8 +2,8 @@
 
 USE burgers_db;
 
--- CREATE TABLE tasks (
+-- CREATE TABLE burgers (
 --     id INT PRIMARY KEY AUTO_INCREMENT,
---     title VARCHAR(30) NOT NULL,
---     completed BOOLEAN
+--     burger_name VARCHAR(30) NOT NULL,
+--     devoured BOOLEAN DEFAULT false
 -- );
