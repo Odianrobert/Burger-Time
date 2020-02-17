@@ -64,7 +64,7 @@ function printQuestionMarks(num) {
         cb(result);
       });
     },
-    // An example of objColVals would be {name: panther, sleepy: true}
+    // An example of objColVals would be {burger_name: The Italian, devoured: true}
     update: function(table, objColVals, condition, cb) {
       var queryString = "UPDATE " + table;
   
