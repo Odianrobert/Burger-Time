@@ -1,42 +1,48 @@
+	<h1>BURGER TIME!</h1>
+	<div>
+		<h2>Burgers To Be Devoured</h2>
+      <ul class=>
+        {{#each burgers}} {{#unless this.devoured}}
+        <div>
+          <li>{{this.burger_name}}</li>
+          <div>
+            {{!-- Button sends this.id back to the server --}}
+            <form action="eatBurger/{{this.id}}" method="POST">
+              <button type="submit" class="btn btn-default btn-primary devourButton">DEVOUR IT!</button>
+            </form>
+          </div>
+        </div>
+        {{/unless}} {{/each}}
+      </ul>
+	</div>
 
-<h1>Burger Time!</h1>
+    <div>
+      <form class="create-update-form" action="burgers" method="POST">
+        <div class="form-group col-lg-2">
+          <textarea placeholder="Enter a burger you want to eat, and then click the submit button." id="burgername" name="burger_name"
+            rows="4" cols="20"></textarea>
+          <br>
+          <button type="submit" class="btn btn-lg btn-primary submitButton">Submit</button>
+        </div>
+      </form>
+    </div>
 
-<h2>Burgers that are undevoured</h2>
+    <div>
+		<h2>Burgers That Have Been Devoured</h2>
+      <div>
+        <ul>
+          {{#each burgers}} {{#if this.devoured}}
+          <div>
+            <li>{{this.burger_name}}</li>
+          </div>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burger-block devoured=false}}
-    {{/unless}}
-  {{/each}}<li>{{burger_name}}</li> 
-</ul>
+          {{/if}} {{/each}}
+      </div>
+      </ul>
+    </div>
 
-<h2>Burgers that are devoured</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#unless undevoured}}
-     {{> burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form" action="/burgers" method="POST">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-      <input type="text" id="ca" name="burger_name">
-      <button type="submit">Add Burger</button>
   </div>
-
-  {{!-- <div class="form-group">
-    <label for="slee">?</label><br>
-    <input type="radio" name="devoured" value="1"> S!<br>
-    <input type="radio" name="devoured" value="0"> Awake
-  </div> --}}
-
-  
+ 
 </form>
 
    

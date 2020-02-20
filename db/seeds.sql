@@ -1,9 +1,8 @@
--- INSERT INTO burgers (burger_name)
--- VALUES ("The Pounder"),
---  ("The Heart Attack"),
---  ("The Italian"),
---  ("The Smokeshow"),
---  ("The BBQ Blaster"),
---  ("The American"),
---  ("The Clogger")
-
+-- INSERT INTO burgers (burger_name, devoured)
+-- VALUES ("The Pounder", false),
+--  ("The Heart Attack", false),
+--  ("The Italian", false),
+--  ("The Smokeshow", false),
+--  ("The BBQ Blaster", false),
+--  ("The American", false),
+--  ("The Clogger", true)
