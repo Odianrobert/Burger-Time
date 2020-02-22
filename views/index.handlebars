@@ -1,48 +1,71 @@
-	<h1>BURGER TIME!</h1>
-	<div>
-		<h2>Burgers To Be Devoured</h2>
-      <ul class=>
-        {{#each burgers}} {{#unless this.devoured}}
-        <div>
-          <li>{{this.burger_name}}</li>
-          <div>
-            {{!-- Button sends this.id back to the server --}}
-            <form action="eatBurger/{{this.id}}" method="POST">
-              <button type="submit" class="btn btn-default btn-primary devourButton">DEVOUR IT!</button>
+	
+<div class="row d-flex justify-content-center">
+  <div class="col-md-4">
+    <div class="card mb-3"  class="undevoured">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="./assets/img/burger.jpg" class="card-img" alt="...">
+        </div>
+          <div class="col-sm-8">
+            <div class="card-body">
+		          <h5 class="card-title">Burgers To Be Devoured</h5>
+                <ul>
+                {{#each burgers}} {{#unless this.devoured}}
+                  <div>
+                    <li  class="card-text">{{this.burger_name}}</li>
+                  <div>
+                    <form action="eatBurger/{{this.id}}" method="POST">
+                      <button type="submit" class="btn btn-default btn-primary devourButton">DEVOUR IT!</button>
+                    </form>
+                  </div>
+                  </div>
+                  {{/unless}} {{/each}}
+                  </ul>
+	          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="card mb-3 col-sm-4 d-flex justify-content-center">
+    <div class="row no-gutters">
+      <div class="col-md-3">
+        <img src="/assets/img/e96b1aa36987ea3ebbbea9d48996cb6f--vector-illustrations-burgers.jpg" class="card-img" alt="ingredients">
+      </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <form class="create-update-form" action="burgers" method="POST">
+              <div class="form-group col-lg-2">
+                <textarea placeholder="Enter a burger you want to eat, and then click the burger button." id="burgername" name="burger_name"
+                        rows="4" cols="30"></textarea>
+                <br>
+                <button type="submit" class="btn btn-lg btn-primary submitButton">Submit</button>
+              </div>
             </form>
           </div>
         </div>
-        {{/unless}} {{/each}}
-      </ul>
-	</div>
-
-    <div>
-      <form class="create-update-form" action="burgers" method="POST">
-        <div class="form-group col-lg-2">
-          <textarea placeholder="Enter a burger you want to eat, and then click the submit button." id="burgername" name="burger_name"
-            rows="4" cols="20"></textarea>
-          <br>
-          <button type="submit" class="btn btn-lg btn-primary submitButton">Submit</button>
-        </div>
-      </form>
-    </div>
-
-    <div>
-		<h2>Burgers That Have Been Devoured</h2>
-      <div>
-        <ul>
-          {{#each burgers}} {{#if this.devoured}}
-          <div>
-            <li>{{this.burger_name}}</li>
-          </div>
-
-          {{/if}} {{/each}}
       </div>
-      </ul>
-    </div>
-
   </div>
- 
-</form>
 
-   
+  <div class="col-md-3">
+    <div class="card mb-3"  class="devoured">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="/assets/img/comic-cartoon-empty-plate-retro-book-style-52936967.jpg" class="card-img" alt="empty plate">
+        </div>
+          <div class="col-sm-8">
+            <div class="card-body">
+		          <h5>Burgers That Have Been Devoured</h5>
+                <ul>
+                {{#each burgers}} {{#if this.devoured}}
+                  <li class="card-text">{{this.burger_name}}</li>
+                {{/if}} {{/each}}
+                </ul>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    

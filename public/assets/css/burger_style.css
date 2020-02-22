@@ -1,25 +1,46 @@
-.h1 {
-    margin: 0 auto;
-    color: blue;
+.display-4 {
+  color: black;
+  text-align: center;
+  font-family: 'Knewave' ;
+  margin-bottom: 50px;
 }
 
-li {
-    padding: 5px;
-    margin: 5px;
-    background: #faebd7;
-  }
-  
-  .label {
-    font-weight: bold;
-  }
-  
-  .create-update-form {
-    padding: 5px;
-    margin: 5px;
-    background: aqua;
-  }
-  
-  .form-group {
-    margin-bottom: 5px;
-  }
-  
+.jumbotron {
+  display: flex;
+  align-items: center;
+  height: 200px;
+  background-image: url(https://image.freepik.com/free-vector/burger-pattern-background_67556-123.jpg);
+}
+
+.BG{
+  background-color: peru;
+  overflow-x: hidden;
+}
+
+.col-md-3 {
+  display: inline-block;
+  font-family: 'Knewave';
+}
+
+.col-md-4 {
+  display: inline-block;
+  font-family: 'Knewave' ;
+}
+
+ .btn-lg {
+  font-family: 'Knewave' ;
+  background-color: peru!important;
+  border: none!important;
+  color: black;
+ }
+
+ .btn-default {
+  background-color: peru!important;
+  border: none!important;
+  color: black;
+ }
+
+ ::placeholder {
+  font-family: 'Knewave' ;
+  color: black;
+}
